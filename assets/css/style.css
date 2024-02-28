@@ -1,5 +1,21 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+.container {
+    max-width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+
+    .square {
+        width: 75px;
+        height: 75px;
+        background-color: paleturquoise;
+        text-align: center;
+        border: 1px solid black;
+    }
 }
