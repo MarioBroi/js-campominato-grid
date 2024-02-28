@@ -4,8 +4,13 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: palegreen;
+}
+
 .container {
     max-width: 800px;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -14,8 +19,11 @@
     .square {
         width: 75px;
         height: 75px;
-        background-color: paleturquoise;
         text-align: center;
         border: 1px solid black;
+    }
+
+    .active {
+        background-color: lightskyblue;
     }
 }
