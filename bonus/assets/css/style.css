@@ -1,0 +1,29 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: palegreen;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+
+    .square {
+        width: 75px;
+        height: 75px;
+        text-align: center;
+        border: 1px solid black;
+    }
+
+    .active {
+        background-color: lightskyblue;
+    }
+}
