@@ -23,23 +23,22 @@
 
 
 ### Steps
-- create a random number function to generate a number between min and max (1-100, 1-81, 1-49)
+- create a random number function to generate a number between min and max (1-100, 1-81, 1-49) ✔
 
-- create an empty mushroomArray
+- create an empty mushroomArray ✔
 
-- (while) loop over until the empty array has 16 elements (not repeated)
+- (while) loop over until the empty array has 16 elements (not repeated) ✔
     - check the generated number is includeed for the mush array
     - if not push the number in array
 
-- read the numbers of the clicked cell
+- read the numbers of the clicked cell ✔
 
 - check if the clicked cell's number is included inside the mush array
-
-- if true 
-    - pain the cell to red
-    - end the game console.log('end game')
-- else
-    - paint the cell of green
+    - if true 
+        - paint the cell to red
+        - end the game console.log('end game')
+    - else
+        - paint the cell of green
 
 - keep the count of the clicked cells
 

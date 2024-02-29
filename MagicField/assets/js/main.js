@@ -22,21 +22,30 @@
         generateMagicField(magicField, cellsNumber);
 
         //- create an empty mushroomArray
+/*         function mushArrayFunction() {
+            
+            mushArrayFunction.apply(null, mushroomArray);
+        }  */  //-----DEVO CAPIRE COME RICHIAMARE UN ARRAY DENTRO UNA FUNCTION --------------
+
+
         let mushroomArray = [];
 
         //- (while) lopp over until the empty array has 16 elements (not repeated)
-        while (mushroomArray.length < 16) {
+        while (mushArrayFunction.length < 16) {
             // inside the loop
-            console.log(cellsNumber);
+            //console.log(cellsNumber);
+
             const randomNumber = getRandomInteger(1, cellsNumber)
-            console.log(randomNumber);
+            //console.log(randomNumber);
+
             // check if the number is already inside the array?
-            // otherwise push it
-            if (!mushroomArray.includes(randomNumber)) {
-                mushroomArray.push(randomNumber)
+            if (!mushArrayFunction.includes(randomNumber)) {
+                // otherwise push it
+                mushArrayFunction.push(randomNumber)
             }
-            console.log(mushroomArray);
+            console.log(mushArrayFunction);
         }
+
     });
 
 })();
@@ -85,6 +94,13 @@ function attachEventToMagicCell(node) {
     node.addEventListener('click', function (e) {
         // add a active class to the clicked element
         //console.log(this, e); // this é il nodo della dom in questo contesto - e é l'evento triggerato
+        console.log(parseInt(this.innerText));
+
+        if (parseInt(this.innerText) == mushroomArray.every()) {
+            console.log('perso');
+        } else {
+            console.log('vinto');
+        }
         this.classList.toggle('bg-active');
         // print into the console the cell number
         //console.log(this.innerText);
