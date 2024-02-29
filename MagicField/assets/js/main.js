@@ -92,7 +92,9 @@ function attachEventToMagicCell(node) {
 
         if (mushroomArray.includes(parseInt(this.innerText)) == true) {
             console.log('perso');
+
             this.classList.toggle('red')
+            this.innerText = '⚰️';
             //print the class whit red color
 
         } else {
@@ -116,7 +118,6 @@ function generateMagicCell(numb, size) {
     const nodeCellElement = document.createElement('div');
     nodeCellElement.classList.add('cell');
     nodeCellElement.innerText = numb;
-    /* nodeCellElement.style.width = `calc(100% / ${Math.sqrt(size)})`; */
 
     return nodeCellElement;
 }
