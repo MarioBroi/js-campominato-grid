@@ -28,7 +28,7 @@
 - create an empty mushroomArray
 
 - (while) loop over until the empty array has 16 elements (not repeated)
-    - check the generated number is includeed for tyhe mush array
+    - check the generated number is includeed for the mush array
     - if not push the number in array
 
 - read the numbers of the clicked cell
