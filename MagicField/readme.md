@@ -27,7 +27,7 @@
 
 - create an empty mushroomArray
 
-- (while) lopp over until the empty array has 16 elements (not repeated)
+- (while) loop over until the empty array has 16 elements (not repeated)
     - check the generated number is includeed for tyhe mush array
     - if not push the number in array
 

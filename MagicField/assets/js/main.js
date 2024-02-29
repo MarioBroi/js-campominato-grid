@@ -21,9 +21,35 @@
 
         generateMagicField(magicField, cellsNumber);
 
+        //- create an empty mushroomArray
+        let mushroomArray = [];
+
+        //- (while) lopp over until the empty array has 16 elements (not repeated)
+        while (mushroomArray.length < 16) {
+            // inside the loop
+            console.log(cellsNumber);
+            const randomNumber = getRandomInteger(1, cellsNumber)
+            console.log(randomNumber);
+            // check if the number is already inside the array?
+            // otherwise push it
+            if (!mushroomArray.includes(randomNumber)) {
+                mushroomArray.push(randomNumber)
+            }
+            console.log(mushroomArray);
+        }
     });
 
 })();
+
+/**
+ * Crea un numero random tra la difficoltá scelta
+ * @param {number} min 
+ * @param {number} max 
+ * @returns 
+ */
+function getRandomInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+};
 
 /**
  * Genera il campo prima pulendo il campo stesso, 
