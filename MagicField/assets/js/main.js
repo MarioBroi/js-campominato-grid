@@ -1,3 +1,6 @@
+let mushroomArray = [];
+let punteggio = 0;
+
 /**
  * Inizia il gioco IIFE
  */
@@ -21,30 +24,21 @@
 
         generateMagicField(magicField, cellsNumber);
 
-        //- create an empty mushroomArray
-/*         function mushArrayFunction() {
-            
-            mushArrayFunction.apply(null, mushroomArray);
-        }  */  //-----DEVO CAPIRE COME RICHIAMARE UN ARRAY DENTRO UNA FUNCTION --------------
-
-
-        let mushroomArray = [];
-
         //- (while) lopp over until the empty array has 16 elements (not repeated)
-        while (mushArrayFunction.length < 16) {
+        while (mushroomArray.length < 16) {
             // inside the loop
             //console.log(cellsNumber);
 
-            const randomNumber = getRandomInteger(1, cellsNumber)
+            const randomNumber = getRandomInteger(1, cellsNumber);
             //console.log(randomNumber);
 
             // check if the number is already inside the array?
-            if (!mushArrayFunction.includes(randomNumber)) {
+            if (!mushroomArray.includes(randomNumber)) {
                 // otherwise push it
-                mushArrayFunction.push(randomNumber)
+                mushroomArray.push(randomNumber);
             }
-            console.log(mushArrayFunction);
-        }
+            console.log(mushroomArray);
+        };
 
     });
 
@@ -96,14 +90,19 @@ function attachEventToMagicCell(node) {
         //console.log(this, e); // this é il nodo della dom in questo contesto - e é l'evento triggerato
         console.log(parseInt(this.innerText));
 
-        if (parseInt(this.innerText) == mushroomArray.every()) {
+        if (mushroomArray.includes(parseInt(this.innerText)) == true) {
             console.log('perso');
+            this.classList.toggle('red')
+            //print the class whit red color
+
         } else {
             console.log('vinto');
+            this.classList.toggle('green')
+            punteggio = punteggio + 1
+            console.log(punteggio);
+            //print the class whit green color
         }
-        this.classList.toggle('bg-active');
-        // print into the console the cell number
-        //console.log(this.innerText);
+
     });
 }
 

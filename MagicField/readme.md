@@ -33,16 +33,16 @@
 
 - read the numbers of the clicked cell ✔
 
-- check if the clicked cell's number is included inside the mush array
+- check if the clicked cell's number is included inside the mush array ✔
     - if true 
         - paint the cell to red
         - end the game console.log('end game')
     - else
         - paint the cell of green
 
-- keep the count of the clicked cells
+- keep the count of the clicked cells ✔
 
-- end the game
+- end the game 
     - when the num of clicked cell is = to the tot num of cells - numbs of mush you win
 
 - prevent the user clicking again after the game is over
