@@ -27,28 +27,23 @@ header {
     padding: 0.5rem 0;
 }
 
-.noContainer {
+h1 {
+    color: rgb(98, 221, 89);
+    padding: 1rem;
+}
+
+form {
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    & h1 {
-        color: rgb(98, 221, 89);
-        padding: 1rem;
-    }
-
-    & label {
-        color: #d32525;
-        font-size: 30px;
-        padding: 0.5rem;
-    }
-
-    & select {
-        border: none;
-        padding: 0.3rem 1rem;
-        color: #d32525;
-    }
 }
+
+select {
+    border: none;
+    padding: 0.3rem 1rem;
+    color: #d32525;
+}
+
 
 #field {
     max-width: 800px;
@@ -78,18 +73,6 @@ header {
         background-color: green;
     }
 
-}
-
-.easy-container {
-    max-width: 550px;
-}
-
-.medium-container {
-    max-width: 700px;
-}
-
-.hard-container {
-    max-width: 800px;
 }
 
 /* #region Button */
@@ -167,10 +150,6 @@ header {
 
 :root {
     --background-size: unquote("min(100vw, 40em)");
-}
-
-html {
-    font-size: calc(100% + 0.5vw);
 }
 
 @media (prefers-reduced-motion: reduce) {

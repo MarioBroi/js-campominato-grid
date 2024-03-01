@@ -85,27 +85,43 @@ function generateMagicField(fieldDomElement, level) {
  * @param {*} node 
  */
 function attachEventToMagicCell(node) {
-    node.addEventListener('click', function (e) {
-        // add a active class to the clicked element
-        //console.log(this, e); // this é il nodo della dom in questo contesto - e é l'evento triggerato
-        console.log(parseInt(this.innerText));
+    node.addEventListener('click', handleClick);
+}
 
-        if (mushroomArray.includes(parseInt(this.innerText)) == true) {
-            console.log('perso');
+function handleClick(e) {
+    // add a active class to the clicked element
+    //console.log(this, e); // this é il nodo della dom in questo contesto - e é l'evento triggerato
+    console.log(parseInt(this.innerText));
 
-            this.classList.toggle('red')
-            this.innerText = '⚰️';
-            //print the class whit red color
+    if (mushroomArray.includes(parseInt(this.innerText)) == true) {
+        console.log('perso');
 
-        } else {
-            console.log('vinto');
-            this.classList.toggle('green')
-            punteggio = punteggio + 1
-            console.log(punteggio);
-            //print the class whit green color
-        }
+        this.classList.toggle('red')
+        this.innerText = '⚰️';
+        //print the class whit red color
+        /* 
+                (!alert('You Lose, want to retry?')) {
+                    wondow.location.reload();
+                } */
+    } else {
+        console.log('vinto');
+        this.classList.toggle('green')
+        punteggio = punteggio + 1
+        console.log(punteggio);
+        //print the class whit green color
+    }
 
-    });
+}
+
+function gameOver() {
+    const score = document.getElementsByClassName('red').length;
+
+    const cells = document.querySelectorAll('cells');
+
+    for (let i = 0; i < cells.length; i++) {
+        const node = cells[i];
+        node.removeEventListener('click', handleClick)
+    }
 }
 
 /**
