@@ -55,24 +55,36 @@ select {
     margin: 3rem auto;
 
     .cell {
-        width: 75px;
-        height: 75px;
-        line-height: 75px;
+        width: calc(100% / 10);
+        aspect-ratio: 1;
+        flex-shrink: 0;
+        border: 1px solid;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         text-align: center;
         color: #c01010;
         border: 1px solid yellowgreen;
         background-color: #f6f9fe44;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+        & span {
+            display: none;
+        }
     }
 
     .red {
         background-color: red;
     }
 
-    .green {
+    .bg-active {
         background-color: green;
     }
 
+}
+
+#game-over {
+    display: none;
 }
 
 /* #region Button */
