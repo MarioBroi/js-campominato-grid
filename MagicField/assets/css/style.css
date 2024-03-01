@@ -55,7 +55,7 @@ select {
     margin: 3rem auto;
 
     .cell {
-        width: calc(100% / 10);
+        width: 80px;
         aspect-ratio: 1;
         flex-shrink: 0;
         border: 1px solid;

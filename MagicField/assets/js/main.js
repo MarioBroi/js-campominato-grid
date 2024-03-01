@@ -152,7 +152,7 @@ function generateMagicCell(numb, size) {
     spanEl.innerText = numb;
 
     nodeCellElement.appendChild(spanEl);
-    nodeCellElement.style.width = `calc(100% / ${Math.sqrt(size)})`;
+    /* nodeCellElement.style.width = `calc(100% / ${Math.sqrt(size)})`; */
 
     return nodeCellElement;
 }
